@@ -4,8 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Demli · yapay zekâ, iyice demlenmiş</title>
-<meta name="description" content="Demli: yapay zekâ ve ajanları abartmadan, aynı prompt ve tek atışla sınayan Türkçe YouTube kanalı. Videolar, kod, slaytlar ve duvar kâğıtları.">
-<meta name="theme-color" content="#F7EEE4">
+<meta name="description" content="Demli: yapay zekâ ve ajanları abartmadan, aynı prompt ve tek atışla sınayan Türkçe YouTube kanalı. Videolar, Demli Testi, sunumlar ve duvar kâğıtları.">
+<meta name="theme-color" content="#1E1712">
+<meta name="color-scheme" content="dark">
 <link rel="canonical" href="https://demliai.github.io/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Demli">
@@ -16,88 +17,179 @@
 <meta property="og:image" content="https://demliai.github.io/assets/img/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Demli: ince belli, tavşankanı çayla dolu, sakin bakışlı çay bardağı maskotu ve 'yapay zekâ, iyice demlenmiş' yazısı">
+<meta property="og:image:alt" content="Gece çay ocağında, lamba ışığında duran Demli maskotu ve 'Demli. yapay zekâ, iyice demlenmiş' yazısı">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" href="assets/img/favicon-32.png" type="image/png" sizes="32x32">
 <link rel="icon" href="assets/img/favicon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
+<link rel="preload" as="image" href="assets/img/sahne/gece-1440.webp" imagesrcset="assets/img/sahne/gece-960.webp 960w, assets/img/sahne/gece-1440.webp 1440w, assets/img/sahne/gece-2048.webp 2048w" imagesizes="(max-aspect-ratio: 16/9) 178vh, 100vw" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/demli.css">
+<link rel="stylesheet" href="assets/css/gece.css">
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body class="ana">
-<a class="atla" href="#baglantilar">Bağlantılara geç</a>
-<svg class="grain" aria-hidden="true"><filter id="gr"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="11"/><feColorMatrix values="0 0 0 0 .3  0 0 0 0 .22  0 0 0 0 .15  0 0 0 .9 0"/></filter><rect width="100%" height="100%" filter="url(#gr)"/></svg>
+<a class="atla" href="#menu">Menüye geç</a>
 
-<main class="ana-izgara">
-  <section class="giris" aria-labelledby="baslik">
-    <span class="kicker" data-dem style="--i:0">youtube · türkçe · yapay zekâ ve ajanlar</span>
-    <h1 id="baslik" data-dem style="--i:1">Demli<span class="n">.</span></h1>
-    <p class="slogan" data-dem style="--i:2">yapay zekâ, iyice demlenmiş</p>
-    <p class="on-yazi" data-dem style="--i:3">Yeni modelleri aynı görevle, tek atışta sınıyoruz. Abartı yok; sonucu çay bardağıyla ölçüp sakin bir hüküm veriyoruz.</p>
+<header class="ust" data-ust>
+  <a class="marka" href="./" aria-label="Demli ana sayfa">demli<span class="n">.</span></a>
+  <nav aria-label="Site">
+    <ul>
+      <li class="gizle-dar"><a href="#demli-testi">demli testi</a></li>
+      <li class="gizle-dar"><a href="slaytlar/">sunumlar</a></li>
+      <li class="gizle-dar"><a href="duvar-kagidi/">duvar kâğıtları</a></li>
+      <li><a class="yt" href="https://www.youtube.com/@demliai" data-baglanti="youtube" rel="noopener">YouTube <span aria-hidden="true">↗</span></a></li>
+    </ul>
+  </nav>
+</header>
 
-    <nav aria-label="Demli bağlantıları">
-      <ul class="baglantilar" id="baglantilar">
-        <li data-dem style="--i:4">
-          <a class="bag koyu" href="https://www.youtube.com/@demliai" data-baglanti="youtube" data-dis data-ruh="etkilenmis" rel="noopener">
-            <span class="tabak" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="1.5" y="4.5" width="21" height="15" rx="4.6" fill="#16130F"/><path d="M9.8 8.6v6.8l5.9-3.4z" fill="#fff"/></svg></span>
-            <span class="metin"><span class="kicker">youtube · @demliai</span><b>Videolar</b><small>Model testleri ve sakin hükümler. Yeni bölüm burada.</small></span>
-            <span class="ok" aria-hidden="true">↗</span>
-          </a>
-        </li>
-        <li data-dem style="--i:5">
-          <a class="bag" href="https://github.com/demliai" data-baglanti="github" data-dis data-ruh="dusunuyor" rel="noopener">
-            <span class="tabak" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="#16130F" d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.6 1.6.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></span>
-            <span class="metin"><span class="kicker">github · demliai</span><b>Kod ve test arşivi</b><small>Testlerin promptları, modellerin ham çıktıları ve bu sitenin kodu.</small></span>
-            <span class="ok" aria-hidden="true">↗</span>
-          </a>
-        </li>
-        <li data-dem style="--i:6">
-          <a class="bag" href="slaytlar/" data-ruh="kas-kalkik">
-            <span class="tabak" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#16130F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 4h19"/><rect x="4" y="4" width="16" height="11" rx="1"/><path d="M12 15v3.5M8.5 21l3.5-2.5 3.5 2.5"/><path d="M8 11.5l2.6-2.6 2 2 3.4-3.4" stroke="#AD341B"/></svg></span>
-            <span class="metin"><span class="kicker">slaytlar</span><b>Sunumlar</b><small>Videolarda ekranda duran sunumlar. Tarayıcıda açılır.</small></span>
-            <span class="ok" aria-hidden="true">→</span>
-          </a>
-        </li>
-        <li data-dem style="--i:7">
-          <a class="bag" href="duvar-kagidi/" data-ruh="tasti">
-            <span class="tabak" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#16130F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="4" width="15" height="10.5" rx="1.5"/><path d="M6 18.5h6M9 14.5v4"/><rect x="15.5" y="8" width="7" height="12.5" rx="1.6" fill="#fff"/><path d="M18 18h2"/></svg></span>
-            <span class="metin"><span class="kicker">duvar kâğıdı</span><b>Duvar kâğıtları</b><small>Masaüstü ve telefon için, 4K'ya kadar. Ücretsiz indir.</small></span>
-            <span class="ok" aria-hidden="true">→</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </section>
+<main>
+  <!-- 1 · GECE ÇAY OCAĞI -->
+  <section class="sahne" aria-labelledby="baslik" data-sahne>
+    <div class="plaka" aria-hidden="true">
+      <img src="assets/img/sahne/gece-1440.webp" srcset="assets/img/sahne/gece-960.webp 960w, assets/img/sahne/gece-1440.webp 1440w, assets/img/sahne/gece-2048.webp 2048w" sizes="(max-aspect-ratio: 16/9) 178vh, 100vw" width="2048" height="1152" alt="" fetchpriority="high" decoding="async">
+      <svg class="buhar buhar-masa" viewBox="0 0 60 120" aria-hidden="true"><path d="M22 118c-9-14 9-22 0-38s0-26 6-44"/><path d="M36 118c-9-14 9-22 0-38s0-28 5-50"/></svg>
+    </div>
+    <div class="isik" aria-hidden="true"></div>
+    <div class="karanlik" aria-hidden="true"></div>
 
-  <aside class="sahne" aria-label="Demli maskotu">
-    <div class="kemer" data-dem style="--i:2">
-      <div class="ic"></div>
-      <div class="cerceve"></div>
-      <div class="kukla" data-kukla>
-        <svg class="buhar" viewBox="0 0 80 90" aria-hidden="true"><path d="M24 86c-10-14 10-22 0-36S22 22 26 6"/><path d="M42 86c-10-14 10-22 0-36S40 22 44 6"/><path d="M60 86c-10-14 10-22 0-36S58 22 62 6"/></svg>
-        <img class="poz aktif ayna" data-poz="bekle" src="assets/img/demli/isaret-sag-900.webp" srcset="assets/img/demli/isaret-sag-520.webp 520w, assets/img/demli/isaret-sag-900.webp 900w" sizes="(max-width:860px) 280px, 500px" width="900" height="1080" alt="Demli: tabağın üstünde duran, tavşankanı çayla dolu, yarı kapalı gözlü ince belli çay bardağı. Bağlantıları işaret ediyor.">
-        <img class="poz" data-poz="etkilenmis" src="assets/img/demli/etkilenmis-900.webp" srcset="assets/img/demli/etkilenmis-520.webp 520w, assets/img/demli/etkilenmis-900.webp 900w" sizes="(max-width:860px) 280px, 500px" width="900" height="1080" alt="" aria-hidden="true" loading="lazy" decoding="async">
-        <img class="poz" data-poz="dusunuyor" src="assets/img/demli/dusunuyor-900.webp" srcset="assets/img/demli/dusunuyor-520.webp 520w, assets/img/demli/dusunuyor-900.webp 900w" sizes="(max-width:860px) 280px, 500px" width="900" height="1080" alt="" aria-hidden="true" loading="lazy" decoding="async">
-        <img class="poz" data-poz="kas-kalkik" src="assets/img/demli/sessiz-onay-900.webp" srcset="assets/img/demli/sessiz-onay-520.webp 520w, assets/img/demli/sessiz-onay-900.webp 900w" sizes="(max-width:860px) 280px, 500px" width="900" height="1080" alt="" aria-hidden="true" loading="lazy" decoding="async">
-        <img class="poz" data-poz="tasti" src="assets/img/demli/tasti-900.webp" srcset="assets/img/demli/tasti-520.webp 520w, assets/img/demli/tasti-900.webp 900w" sizes="(max-width:860px) 280px, 500px" width="900" height="1080" alt="" aria-hidden="true" loading="lazy" decoding="async">
+    <div class="sahne-ic">
+      <div class="metin">
+        <p class="kicker" data-gir style="--i:0">&gt; youtube · türkçe · yapay zekâ ve ajanlar</p>
+        <h1 id="baslik" data-gir style="--i:1">Demli<span class="n">.</span></h1>
+        <p class="slogan" data-gir style="--i:2">yapay zekâ, iyice demlenmiş</p>
+        <p class="on-yazi" data-gir style="--i:3">Yeni modellere aynı görevi veriyoruz, tek atışta. Abartı yok; sonucu çay bardağıyla ölçüp sakin bir hüküm veriyoruz.</p>
+        <div class="dugmeler" data-gir style="--i:4">
+          <a class="dugme ana" href="https://www.youtube.com/@demliai" data-baglanti="youtube" data-ruh="etkilenmis" rel="noopener">Videoları izle <span aria-hidden="true">↗</span></a>
+          <a class="dugme" href="#demli-testi" data-ruh="dusunuyor">İlk test · 27 Kasım <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+      <div class="demli" data-demli role="img" aria-label="Demli: tabağının üstünde duran, tavşankanı çayla dolu, yarı kapalı gözlü ince belli çay bardağı. İmleci gözleriyle izliyor.">
+        <noscript><img src="assets/img/demli/isaret-sag-520.webp" width="520" height="624" alt=""></noscript>
       </div>
     </div>
-    <div class="tezgah" data-dem style="--i:3"><div class="cift"></div></div>
-    <p class="durum" aria-hidden="true" data-dem style="--i:4">
-      <span class="etiket mono">ruh hali · <b data-ruh-yazi>sıkılmış</b></span>
-    </p>
-  </aside>
+
+    <a class="asagi" href="#menu"><span>kaydır, demlensin</span><svg viewBox="0 0 16 40" aria-hidden="true"><path d="M8 2v34M3 31l5 6 5-6"/></svg></a>
+  </section>
+
+  <!-- 2 · MENÜ TAHTASI -->
+  <section class="duvar" id="menu" aria-labelledby="menu-baslik">
+    <img class="lamba" src="assets/img/sahne/lamba.webp" width="300" height="230" alt="" loading="lazy" decoding="async" aria-hidden="true">
+    <div class="tahta-yer">
+      <div class="tahta" data-dem>
+        <div class="tahta-ic">
+          <div class="tahta-bas">
+            <p class="kicker">&gt; ocak menüsü</p>
+            <h2 id="menu-baslik">Ne alırdınız?</h2>
+          </div>
+          <ol class="liste">
+            <li data-dem style="--i:1">
+              <a href="https://www.youtube.com/@demliai" data-baglanti="youtube" rel="noopener">
+                <span class="ad">Videolar</span><span class="leke" aria-hidden="true"></span><span class="fiyat yeni">yeni</span>
+                <span class="acik">Model testleri ve sakin hükümler. YouTube'da @demliai.</span>
+              </a>
+            </li>
+            <li data-dem style="--i:2">
+              <a href="#demli-testi">
+                <span class="ad">Demli Testi</span><span class="leke" aria-hidden="true"></span><span class="fiyat">27 kasım</span>
+                <span class="acik">Tavla, vapur, İznik çini. Beş model, aynı prompt, tek atış.</span>
+              </a>
+            </li>
+            <li data-dem style="--i:3">
+              <a href="slaytlar/">
+                <span class="ad">Sunumlar</span><span class="leke" aria-hidden="true"></span><span class="fiyat">14 slayt</span>
+                <span class="acik">Videolarda ekranda duran sunumlar. Tarayıcıda, klavyeyle.</span>
+              </a>
+            </li>
+            <li data-dem style="--i:4">
+              <a href="duvar-kagidi/">
+                <span class="ad">Duvar kâğıtları</span><span class="leke" aria-hidden="true"></span><span class="fiyat">4K</span>
+                <span class="acik">Masaüstü ve telefon için. Ücretsiz indir.</span>
+              </a>
+            </li>
+            <li data-dem style="--i:5">
+              <a href="https://github.com/demliai" data-baglanti="github" rel="noopener">
+                <span class="ad">GitHub</span><span class="leke" aria-hidden="true"></span><span class="fiyat">açık</span>
+                <span class="acik">Promptlar, ham çıktılar, puanlar ve bu sitenin kodu.</span>
+              </a>
+            </li>
+          </ol>
+          <p class="tahta-alt">hepsi ücretsiz · garson yok, kendin al</p>
+        </div>
+      </div>
+      <img class="kenardan" src="assets/img/nesne/kenardan-bakis.webp" width="236" height="520" alt="" loading="lazy" decoding="async" aria-hidden="true">
+    </div>
+  </section>
+
+  <!-- 3 · DEMLİ TESTİ -->
+  <section class="test" id="demli-testi" aria-labelledby="test-baslik">
+    <div class="test-ic">
+      <div class="test-bas">
+        <img class="rozet" src="assets/img/nesne/rozet-demli-testi.webp" width="420" height="419" alt="Demli Testi rozeti: terazinin ortasında çay bardağı" loading="lazy" decoding="async" data-dem>
+        <div>
+          <p class="kicker" data-dem style="--i:1">&gt; demli testi · 01</p>
+          <h2 id="test-baslik" data-dem style="--i:2">Üç görev. Beş model. <span class="vurgu">Tek</span> atış.</h2>
+          <p class="on-yazi" data-dem style="--i:3">Aynı prompt kelimesi kelimesine verilir; ikinci şans yok. Puanı çay ölçer gösterir: bardak ne kadar doluysa o kadar demlenmiş.</p>
+          <p class="sayac" data-dem style="--i:4" data-sayac><span class="nokta" aria-hidden="true"></span><span data-sayac-yazi>İlk demleme 27 Kasım 2026, 16:00</span></p>
+        </div>
+      </div>
+
+      <div class="olcer" data-olcer data-dem style="--i:2">
+        <div class="sekmeler" role="tablist" aria-label="Görev seç" data-sekmeler></div>
+        <p class="gorev-ozet" data-gorev-ozet></p>
+        <ol class="bardaklar" data-bardaklar aria-live="polite"></ol>
+        <p class="olcer-not" data-olcer-not>Bardaklar boş: test henüz demlenmedi. Sonuçlar 27 Kasım'da buraya dolacak.</p>
+        <noscript><p class="olcer-not">Sonuçlar 27 Kasım'da. Ayrıntılar GitHub'daki demli-arena deposunda.</p></noscript>
+      </div>
+
+      <ul class="kurallar">
+        <li data-dem style="--i:1"><b>Aynı prompt</b><span>Kelimesi kelimesine, ek ipucu yok.</span></li>
+        <li data-dem style="--i:2"><b>Tek atış</b><span>İlk teslim edilen dosya puanlanır.</span></li>
+        <li data-dem style="--i:3"><b>Dürüst kayıt</b><span>Süre, deneme ve maliyet adisyona yazılır. Ham çıktılar <a href="https://github.com/demliai/demli-arena" data-baglanti="arena" rel="noopener">demli-arena</a>'da.</span></li>
+      </ul>
+    </div>
+  </section>
 </main>
 
-<footer class="kunye">
-  <div class="cift"></div>
-  <p><span><b>demli.</b> · çay seviyesi ruh halidir</span><span>Seslendirme ve görseller yapay zekâyla üretilir; bu, videolarda da belirtilir.</span></p>
+<!-- 4 · ADİSYON -->
+<footer class="hesap" aria-labelledby="hesap-baslik">
+  <div class="hesap-ic">
+    <div class="bogaz" aria-hidden="true"><img src="assets/img/sahne/bogaz.webp" width="568" height="852" alt="" loading="lazy" decoding="async"></div>
+    <div class="fis-yer">
+      <div class="fis" data-dem>
+        <h2 id="hesap-baslik" class="fis-bas">Demli Çay Ocağı</h2>
+        <p class="fis-alt"><span>masa 01</span><span data-saat>demliai.github.io</span></p>
+        <ul class="satirlar">
+          <li><a href="https://www.youtube.com/@demliai" data-baglanti="youtube" rel="noopener"><span>1 × YouTube</span><i></i><span>@demliai</span></a></li>
+          <li><a href="https://github.com/demliai" data-baglanti="github" rel="noopener"><span>1 × GitHub</span><i></i><span>demliai</span></a></li>
+          <li><a href="https://github.com/demliai/demli-arena" data-baglanti="arena" rel="noopener"><span>1 × Test arşivi</span><i></i><span>arena</span></a></li>
+          <li><a href="slaytlar/"><span>1 × Sunumlar</span><i></i><span>slaytlar</span></a></li>
+          <li><a href="duvar-kagidi/"><span>1 × Duvar kâğıdı</span><i></i><span>4K</span></a></li>
+        </ul>
+        <p class="toplam"><span>ARA TOPLAM</span><i></i><span>0,00 ₺</span></p>
+        <p class="toplam"><span>ÇAY</span><i></i><span>ikram</span></p>
+        <p class="hukum"><span>HÜKÜM</span><span>afiyet olsun</span></p>
+        <p class="fis-not">Görseller yapay zekâ destekli üretilir, kodla kurulur. Yapay ses kullanılan yerler videoda belirtilir.</p>
+      </div>
+      <img class="usta" src="assets/img/nesne/yan-demlik-usta.webp" width="299" height="460" alt="" loading="lazy" decoding="async" aria-hidden="true">
+    </div>
+  </div>
+  <p class="kunye"><span><b>demli.</b> · çay seviyesi ruh halidir</span><span>© 2026 · demliai.github.io</span></p>
 </footer>
 
+<svg class="ilerleme" viewBox="0 0 40 64" aria-hidden="true" data-ilerleme>
+  <defs><clipPath id="ilerleme-ic"><path d="M7 5h26c-1 9-4 16-7 22-2 5-2 9 0 15 2 5 3 9 2 13H12c-1-4 0-8 2-13 2-6 2-10 0-15-3-6-6-13-7-22z"/></clipPath></defs>
+  <rect class="dolu" x="0" y="0" width="40" height="64" clip-path="url(#ilerleme-ic)" data-ilerleme-cay/>
+  <path class="cam" d="M7 5h26c-1 9-4 16-7 22-2 5-2 9 0 15 2 5 3 9 2 13H12c-1-4 0-8 2-13 2-6 2-10 0-15-3-6-6-13-7-22z"/>
+  <path class="tabak" d="M4 59h32"/>
+</svg>
+
 <script src="assets/js/config.js"></script>
-<script src="assets/js/site.js"></script>
+<script src="assets/rig/parcalar.js" defer></script>
+<script src="assets/rig/demli-rig2.js" defer></script>
+<script src="assets/js/gece.js" defer></script>
 </body>
 </html>
