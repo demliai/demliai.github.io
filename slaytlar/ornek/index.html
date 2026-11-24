@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Demli Testi 01 · örnek akış</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../motor/demli-slayt.css">
+</head>
+<body>
+<main class="deste" data-baslik="testi 01 · örnek akış">
+
+  <!-- 01 · kapak -->
+  <section class="slayt k-kapak" data-mod="kagit">
+    <div class="noktalar"></div>
+    <div class="govde dem-grup">
+      <span class="kicker">demli testi 01 · örnek akış</span>
+      <h1>Dört model,<br><span class="alt-cizgi">tek</span> çay ocağı.</h1>
+      <p class="on-yazi">Aynı görevi, aynı kurallarla verdik. Kim demledi, kim taşırdı?</p>
+      <div class="etiketler"><span class="etiket">4 model</span><span class="etiket">1 prompt</span><span class="etiket">tek atış</span></div>
+    </div>
+    <img class="maskot ayna" data-maskot="poz" alt="Demli, başlığı işaret ediyor">
+  </section>
+
+  <!-- 02 · bölüm ayracı -->
+  <section class="slayt k-ayrac" data-mod="demlik">
+    <div class="tabak-no">
+      <div class="golge-nokta"></div>
+      <svg class="buhar" viewBox="0 0 70 70"><path d="M20 64 C10 50 30 42 20 28 C12 18 24 10 22 4"/><path d="M36 64 C26 50 46 42 36 28 C28 18 40 10 38 4"/><path d="M52 64 C42 50 62 42 52 28 C44 18 56 10 54 4"/></svg>
+      <div class="yuz"><b>01</b></div>
+    </div>
+    <div class="dem-grup">
+      <span class="kicker">bölüm 01</span>
+      <h2>Görev.</h2>
+      <p class="on-yazi">Tek prompt, tek atış, aynı süre.<br>Gerisi modelin işi.</p>
+      <div class="cift-cizgi"></div>
+    </div>
+  </section>
+
+  <!-- 03 · madde listesi -->
+  <section class="slayt k-madde" data-mod="kagit">
+    <div class="bas dem-grup">
+      <span class="kicker">kurallar</span>
+      <h2>Kurallar basit, tavizsiz.</h2>
+      <p class="on-yazi">Her model aynı masaya oturdu, aynı bardağı aldı.</p>
+    </div>
+    <ol class="madde-liste">
+      <li data-adim="1"><b>Tek prompt</b><span>Aynı metin, kelimesi kelimesine.</span></li>
+      <li data-adim="2"><b>Tek atış</b><span>İlk cevap neyse o; ikinci şans yok.</span></li>
+      <li data-adim="3"><b>Aynı süre</b><span>Herkese aynı saat, aynı makine.</span></li>
+      <li data-adim="4"><b>Puanı çay ölçer verir</b><span>0–100 arası; 100'ü aşan taşmış sayılır.</span></li>
+    </ol>
+  </section>
+
+  <!-- 04 · alıntı -->
+  <section class="slayt k-alinti" data-mod="kagit">
+    <div class="tirnak">“</div>
+    <span class="kicker">görev metni</span>
+    <blockquote>Bir çay ocağı simülasyonu yaz. Bardaklar dolsun, biri taşsın.</blockquote>
+    <cite>görev promptu · örnek metin</cite>
+  </section>
+
+  <!-- 05 · kod bloğu -->
+  <section class="slayt k-kod" data-mod="kagit">
+    <div class="dem-grup">
+      <span class="kicker">kod</span>
+      <h2>Taşma, dört satır.</h2>
+      <p class="on-yazi" style="margin-top:34px">Bardak dolmaya yaklaşınca hız düşer, kenardan damla düşer.</p>
+    </div>
+    <div class="kod" data-dil="js" data-dosya="sim/cay-ocagi.html" data-vurgu="4-7">
+<pre>
+} else if (durum === 'dok') {
+  b.sev += dt * (b.sev > 1 ? 0.15 : 0.62);
+  b.dalga = 1;
+  if (b.sev > 1) {             // taşma: kenardan damla
+    b.taskan = (b.taskan || 0) + dt;
+    if (b.taskan > 0.16) b.damlalar.push(kenar(b));
+  }
+  if (b.sev >= b.hedef) durum = 'kalk';
+}
+</pre>
+    </div>
+  </section>
+
+  <!-- 06 · canlı simülasyon -->
+  <section class="slayt k-sim" data-mod="demlik">
+    <div class="sim" data-src="sim/cay-ocagi.html" data-model="örnek sim · elle yazıldı" data-durum="canlı · tarayıcıda"></div>
+    <div class="yan dem-grup">
+      <span class="kicker">canlı</span>
+      <h2>Ocak slaytın içinde yanıyor.</h2>
+      <p class="on-yazi">Modelin yazdığı sayfa çerçeveye gömülür; model adı tabak etiketinde durur.</p>
+    </div>
+  </section>
+
+  <!-- 07 · görsel + açıklama -->
+  <section class="slayt k-gorsel" data-mod="kagit">
+    <figure class="cerceve">
+      <img src="gorsel/ifadeler.png" alt="Demli maskotunun sekiz ifadesi">
+      <figcaption><b>şekil 01</b><span>Demli'nin ifade seti: dolu bardak iyi, taşan bardak fazla, boş bardak şok.</span></figcaption>
+    </figure>
+    <div class="dem-grup">
+      <span class="kicker">ölçü birimi</span>
+      <h2>Puan değil, çay seviyesi.</h2>
+      <p class="on-yazi" style="margin-top:34px">Her sonuç bir bardağın doluluğuyla okunur. Çubuk grafik yok.</p>
+    </div>
+  </section>
+
+  <!-- 08 · bölüm ayracı (imza geçiş: çay silme) -->
+  <section class="slayt k-ayrac" data-mod="demlik" data-gecis="cay">
+    <div class="tabak-no">
+      <div class="golge-nokta"></div>
+      <svg class="buhar" viewBox="0 0 70 70"><path d="M20 64 C10 50 30 42 20 28 C12 18 24 10 22 4"/><path d="M36 64 C26 50 46 42 36 28 C28 18 40 10 38 4"/><path d="M52 64 C42 50 62 42 52 28 C44 18 56 10 54 4"/></svg>
+      <div class="yuz"><b>02</b></div>
+    </div>
+    <div class="dem-grup">
+      <span class="kicker">bölüm 02</span>
+      <h2>Sonuç.</h2>
+      <p class="on-yazi">Bardaklar masada. Kim demledi, kim taşırdı?</p>
+      <div class="cift-cizgi"></div>
+    </div>
+  </section>
+
+  <!-- 09 · çay ölçer yarışması -->
+  <section class="slayt k-olcer" data-mod="demlik" data-ornek-veri>
+    <div class="dem-grup">
+      <span class="kicker">sonuç · tek atış</span>
+      <h2>Kim demledi, kim taşırdı?</h2>
+    </div>
+    <div class="cay-olcer" data-veri='[
+      {"ad":"Model A","puan":92},
+      {"ad":"Model B","puan":112},
+      {"ad":"Model C","puan":64},
+      {"ad":"Model D","puan":18}]'></div>
+  </section>
+
+  <!-- 10 · büyük sayı -->
+  <section class="slayt k-sayi" data-mod="kagit" data-ornek-veri>
+    <div class="dem-grup">
+      <span class="kicker">toplam süre</span>
+      <div class="buyuk-sayi"><span data-say="38">38</span><small>dk</small></div>
+      <p class="on-yazi">Dört modelin toplam çalışma süresi.</p>
+    </div>
+    <div class="istatistikler dem-grup">
+      <div class="istat"><b><span data-say="4">4</span> / 4</b><span>teslim edilen dosya</span></div>
+      <div class="istat"><b><span data-say="1">1</span></b><span>taşan bardak</span></div>
+      <div class="istat"><b>₺0</b><span>ek ücret</span></div>
+    </div>
+  </section>
+
+  <!-- 11 · adisyon -->
+  <section class="slayt k-adisyon" data-mod="demlik" data-ornek-veri>
+    <div class="adisyon" data-veri='{
+      "baslik":"DEMLİ ÇAY OCAĞI",
+      "altBaslik":"test 01 · masa 4 · örnek fiş",
+      "satirlar":[["Model A","14 dk"],["Model B","9 dk"],["Model C","11 dk"],["Model D","4 dk"],["deneme sayısı","1"],["ek ücret","₺0"]],
+      "toplam":["TOPLAM","38 dk"],
+      "hukum":"Model A",
+      "alt":"afiyet olsun"}'></div>
+    <div class="yan dem-grup">
+      <span class="kicker">hesap</span>
+      <h2>Hesabı adisyon döker.</h2>
+      <p class="on-yazi">Süre, deneme, maliyet.<br>Çay ocağı fişi gibi, satır satır.</p>
+    </div>
+  </section>
+
+  <!-- 12 · karşılaştırma, dört kolon -->
+  <section class="slayt k-kiyas" data-mod="kagit" data-ornek-veri>
+    <div class="dem-grup">
+      <span class="kicker">yan yana</span>
+      <h2>Dört model, aynı ölçü.</h2>
+    </div>
+    <div class="kiyas dort dem-grup">
+      <article class="kart kiyas-kart onde">
+        <span class="etiket kucuk">Model A</span>
+        <div class="sira"><div class="deger"><span data-say="92">92</span></div><figure class="bardak mini" data-puan="92"></figure></div>
+        <div class="birim">çay ölçer · önde</div>
+        <dl><dt>süre</dt><dd>14 dk</dd><dt>deneme</dt><dd>1</dd><dt>hata</dt><dd>0</dd></dl>
+      </article>
+      <article class="kart kiyas-kart">
+        <span class="etiket kucuk">Model B</span>
+        <div class="sira"><div class="deger"><span data-say="112">112</span></div><figure class="bardak mini" data-puan="112"></figure></div>
+        <div class="birim">çay ölçer · taştı</div>
+        <dl><dt>süre</dt><dd>9 dk</dd><dt>deneme</dt><dd>1</dd><dt>hata</dt><dd>2</dd></dl>
+      </article>
+      <article class="kart kiyas-kart">
+        <span class="etiket kucuk">Model C</span>
+        <div class="sira"><div class="deger"><span data-say="64">64</span></div><figure class="bardak mini" data-puan="64"></figure></div>
+        <div class="birim">çay ölçer</div>
+        <dl><dt>süre</dt><dd>11 dk</dd><dt>deneme</dt><dd>1</dd><dt>hata</dt><dd>3</dd></dl>
+      </article>
+      <article class="kart kiyas-kart geride">
+        <span class="etiket kucuk kotu">Model D</span>
+        <div class="sira"><div class="deger"><span data-say="18">18</span></div><figure class="bardak mini" data-puan="18"></figure></div>
+        <div class="birim">çay ölçer · dibe çöktü</div>
+        <dl><dt>süre</dt><dd>4 dk</dd><dt>deneme</dt><dd>1</dd><dt>hata</dt><dd>7</dd></dl>
+      </article>
+    </div>
+  </section>
+
+  <!-- 13 · karşılaştırma, iki kolon -->
+  <section class="slayt k-kiyas" data-mod="demlik" data-ornek-veri>
+    <div class="dem-grup">
+      <span class="kicker">ders</span>
+      <h2>Hızlı mı, doğru mu?</h2>
+    </div>
+    <div class="kiyas iki">
+      <article class="kart kiyas-kart geride" data-adim="1">
+        <span class="etiket kucuk kotu">Model D · hızlı olan</span>
+        <h3>Dört dakikada bitti.</h3>
+        <ul><li>Herkesten önce teslim etti</li><li>Bardaklar dolmadı, dibe çöktü</li><li>Tek atışta ikinci şans yok</li></ul>
+        <figure class="bardak mini" data-puan="18"></figure>
+      </article>
+      <article class="kart kiyas-kart onde" data-adim="2">
+        <span class="etiket kucuk">Model A · doğru olan</span>
+        <h3>On dört dakika düşündü.</h3>
+        <ul><li>Taşma kuralını kendisi ekledi</li><li>İlk çalıştırmada hatasız açıldı</li><li>Kodu en kısa olan da oydu</li></ul>
+        <figure class="bardak mini" data-puan="92"></figure>
+      </article>
+    </div>
+  </section>
+
+  <!-- 14 · hüküm -->
+  <section class="slayt k-hukum" data-mod="kagit" data-ornek-veri>
+    <div class="noktalar"></div>
+    <div class="dem-grup">
+      <span class="kicker">hüküm</span>
+      <h2>Tek atışta <span class="alt-cizgi">doğru</span> olan kazandı.</h2>
+      <div class="etiketler"><span class="etiket">Model A · 92</span><span class="etiket kotu">Model D · 18</span></div>
+    </div>
+    <img class="maskot" data-maskot="ifade-dolu" alt="Demli, bardağı dolu">
+  </section>
+
+</main>
+<script src="../motor/demli-slayt.js"></script>
+</body>
+</html>
