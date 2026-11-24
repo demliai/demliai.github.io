@@ -1,18 +1,19 @@
 # demliai.github.io
 
-**Demli** YouTube kanalının bağlantı sitesi: <https://demliai.github.io>
+**Demli** YouTube kanalının sitesi: <https://demliai.github.io>
 
 > yapay zekâ, iyice demlenmiş
 
-Düz HTML, CSS ve biraz JavaScript. Framework yok, derleme adımı yok; GitHub Pages dosyaları olduğu gibi yayınlar.
+Düz HTML, CSS ve ES modülleri. Framework ve derleme adımı yok; GitHub Pages dosyaları olduğu gibi yayınlar.
 
 | Sayfa | Dosya |
 |---|---|
-| Ana sayfa (bağlantılar) | `index.html` |
-| Slaytlar | `slaytlar/index.html`, örnek sunum `slaytlar/ornek/` |
-| Duvar kâğıtları | `duvar-kagidi/index.html`, dosyalar `duvar-kagidi/dosyalar/` |
+| Bağlantı merkezi | `index.html` |
+| Demli Testi | `demli-testi/` |
+| Sunumlar | `sunumlar/` |
+| Duvar kâğıtları | `duvar-kagidi/` |
 | Bulunamadı | `404.html` |
 
-Bağlantı adresleri tek yerde: `assets/js/config.js`.
+İçerik tek kaynaktan gelir: `assets/veri/` (bağlantılar, testler, sunumlar, duvar kâğıtları).
 
 Görseller ve Demli karakteri kanala aittir; izinsiz ticari kullanım yok. Duvar kâğıtları kişisel kullanım için ücretsizdir.

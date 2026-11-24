@@ -1,0 +1,27 @@
+{
+  "_not": "Duvar kâğıtları (yalnız gece serisi). Önizlemeler assets/img/duvar/ altında; tam çözünürlük dosyalar GitHub Releases'a taşınacak. 'indir' şimdilik Releases sayfasına giden yer tutucu.",
+  "indir": "https://github.com/demliai/demliai.github.io/releases",
+  "indirNotu": "Tam çözünürlük dosyalar GitHub Releases’a taşınıyor. Bağlantılar şimdilik Releases sayfasına gider; dosyalar yüklenince doğrudan iner.",
+  "kagitlar": [
+    {
+      "id": "bogaz-gece",
+      "ad": "Boğaz kıyısı",
+      "ozet": "Rıhtımda, lambanın altında. Köprü uzakta, vapur geçiyor.",
+      "alt": "Gece Boğaz kıyısı: sokak lambasının altında Demli ayakları üzerinde duruyor, arkada ışıklı köprü ve vapur.",
+      "olculer": [
+        "1920x1080",
+        "2560x1440"
+      ]
+    },
+    {
+      "id": "vapur-gece",
+      "ad": "Vapur güvertesi",
+      "ozet": "Akşam seferi. Can simidi, ahşap güverte, karşıda cami.",
+      "alt": "Gece vapur güvertesi: Demli ahşap güvertede ayakları üzerinde duruyor, arkada Boğaz ve ışıklı köprü.",
+      "olculer": [
+        "1920x1080",
+        "2560x1440"
+      ]
+    }
+  ]
+}

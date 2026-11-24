@@ -1,0 +1,31 @@
+{
+  "_not": "Demli Testi verisi: sitedeki tarih, model sayısı, model listesi, görevler ve puanlar yalnız buradan okunur. Sonuç gelince her modelin 'puan' alanına 0-100 arası sayı yaz (null = henüz demlenmedi). Durum: bekliyor | demleniyor | bitti. Değiştirdikten sonra: node araclar/veri-bas.mjs",
+  "test": "Demli Testi 01",
+  "tarih": "2026-11-27T16:00:00+03:00",
+  "durum": "bekliyor",
+  "video": null,
+  "arsiv": "https://github.com/demliai/demli-arena",
+  "kurallar": [
+    { "ad": "Aynı prompt", "metin": "Her model aynı metni kelimesi kelimesine alır. Ek ipucu yok." },
+    { "ad": "Tek atış", "metin": "İlk teslim edilen dosya puanlanır. Düzeltme isteği yok." },
+    { "ad": "Tek dosya", "metin": "Çıktı tek bir index.html. Dış kütüphane ve görsel dosyası yok." },
+    { "ad": "Aynı ortam", "metin": "Aynı bilgisayar, aynı tarayıcı, aynı pencere boyutu." },
+    { "ad": "Dürüst kayıt", "metin": "Süre, deneme ve token adisyona yazılır. Farklı birimler yan yana kıyaslanmaz." },
+    { "ad": "Açık arşiv", "metin": "Prompt, ham çıktı, ekran kaydı ve puan herkese açık repoda durur." }
+  ],
+  "gorevler": [
+    { "id": "tavla", "ad": "Tavla", "ozet": "Tek index.html, dış kütüphane yok: Türk kurallarıyla, bilgisayara karşı oynanan tam bir tavla. Kapı, kırma, bardan giriş, çift zar.",
+      "cetvel": [["Açılıyor ve oynanıyor", 20], ["Kural doğruluğu", 35], ["Bilgisayarın oyunu", 15], ["Görsel ve his", 15], ["Hata ve donma yok", 15]] },
+    { "id": "vapur", "ad": "Vapur yanaştırma", "ozet": "Boğaz'da vapuru iskeleye yanaştırma oyunu. Akıntı sürükler; gaz ve dümenle yumuşak yanaşan puan alır. En az üç iskele.",
+      "cetvel": [["Açılıyor ve oynanıyor", 20], ["Fizik", 25], ["Oyun kuralları", 20], ["Görsel ve atmosfer", 20], ["Hata ve donma yok", 15]] },
+    { "id": "iznik", "ad": "İznik çini", "ozet": "Lale, karanfil, rumi ve hatayi motifleriyle simetrik İznik deseni üreten araç. Klasik palet, simetri seçimi, PNG indirme.",
+      "cetvel": [["Açılıyor ve üretiyor", 20], ["Motif doğruluğu", 25], ["Simetri ve geometri", 20], ["Estetik ve palet", 20], ["Özellikler ve hata yok", 15]] }
+  ],
+  "modeller": [
+    { "id": "claude-fable", "aile": "Claude", "ad": "Fable 5.2", "arac": "Claude Code", "puan": { "tavla": null, "vapur": null, "iznik": null } },
+    { "id": "claude-opus", "aile": "Claude", "ad": "Opus 5.5", "arac": "Claude Code", "puan": { "tavla": null, "vapur": null, "iznik": null } },
+    { "id": "claude-sonnet", "aile": "Claude", "ad": "Sonnet 5.5", "arac": "Claude Code", "puan": { "tavla": null, "vapur": null, "iznik": null } },
+    { "id": "gpt-sol", "aile": "GPT", "ad": "6.1 Sol", "arac": "Codex CLI", "puan": { "tavla": null, "vapur": null, "iznik": null } },
+    { "id": "gpt-astra", "aile": "GPT", "ad": "6 Astra", "arac": "Codex CLI", "puan": { "tavla": null, "vapur": null, "iznik": null } }
+  ]
+}

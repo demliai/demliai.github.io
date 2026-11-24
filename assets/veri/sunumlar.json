@@ -1,0 +1,51 @@
+{
+  "_not": "Demli Sahne sunumları. Kaynak: studyo/sahne/sunumlar/<id>/scenes.js. 'adres' null iken sunum henüz yayında değildir (tabaksız pozlar gelince taşınacak).",
+  "sunumlar": [
+    {
+      "id": "demli-testi-v1",
+      "ad": "Demli Testi v1",
+      "ozet": "Videoyu çekerken tarayıcıda canlı açtığım sunum. Her bölüm önce bir gece sahnesiyle açılır, sonra o bölümün simülasyonu oynar.",
+      "adres": null,
+      "durum": "hazırlanıyor",
+      "ornekVeri": true,
+      "bolumler": [
+        "Demli Testi v1",
+        "Kurallar",
+        "Görev 1 · Tavla",
+        "Görev 2 · Vapur",
+        "Görev 3 · İznik çini",
+        "Puan cetveli",
+        "Sonuçlar",
+        "Adisyon",
+        "Hüküm",
+        "Kapanış"
+      ],
+      "tuslar": [
+        [
+          "→",
+          "sonraki adım"
+        ],
+        [
+          "←",
+          "geri"
+        ],
+        [
+          "B",
+          "bölüm menüsü"
+        ],
+        [
+          "N",
+          "sunucu notları"
+        ],
+        [
+          "F",
+          "tam ekran"
+        ]
+      ],
+      "kapak": {
+        "kicker": "demli testi · v1",
+        "baslik": "Aynı görev, tek atış."
+      }
+    }
+  ]
+}

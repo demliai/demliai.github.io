@@ -1,0 +1,69 @@
+/* Demli · belirteçler. Renkler marka dosyasından (atolye/marka.md), tasarım dili v2 "Gece İstanbul'u".
+   Hep gece. Krem kâğıt yalnız veri yüzeyi. Tek vurgu tavşankanı; altın yalnız çizgi. Arayüzde ışıma yok. */
+
+/* Yerel fontlar (SIL OFL), latin + latin-ext alt kümesi: Türkçe harfler latin-ext'te. Google Fonts yok. */
+@font-face { font-family: 'Bricolage Grotesque'; font-style: normal; font-weight: 500 800; font-display: swap;
+  src: url('../fontlar/bricolage-grotesque-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Bricolage Grotesque'; font-style: normal; font-weight: 500 800; font-display: swap;
+  src: url('../fontlar/bricolage-grotesque-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 400 700; font-display: swap;
+  src: url('../fontlar/inter-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 400 700; font-display: swap;
+  src: url('../fontlar/inter-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 400 700; font-display: swap;
+  src: url('../fontlar/jetbrains-mono-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 400 700; font-display: swap;
+  src: url('../fontlar/jetbrains-mono-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+:root {
+  color-scheme: dark;
+  /* gece */
+  --gece: #1E1712;          /* demlik kahvesi: ana zemin */
+  --gece-alt: #17110D;      /* bir kat koyu: alt bilgi, tablo başı */
+  --gece-ust: #261D17;      /* bir kat açık: yükseltilmiş yüzey */
+  --cizgi: rgba(247, 238, 228, .14);
+  --cizgi-guclu: rgba(247, 238, 228, .28);
+  /* yazı (gece üstünde) */
+  --metin: #F7EEE4;
+  --metin-2: #D2C3B3;
+  --metin-3: #A39382;
+  /* marka */
+  --kagit: #F7EEE4;          /* yalnız veri yüzeyi (adisyon) */
+  --murekkep: #16130F;
+  --tavsankani: #AD341B;     /* tek vurgu */
+  --tavsankani-koyu: #92291A;
+  --cay: #DC6C21;            /* çay yüzeyi: alt çizgi, işaretçi */
+  --altin: #D49B26;          /* yalnız çizgi */
+  --olumsuz: #5B6670;
+  --claude: #C98A5E;         /* model kimliği: yalnız 8 px nokta */
+  --gpt: #6FA79D;
+
+  /* yazı */
+  --baslik: 'Bricolage Grotesque', 'Segoe UI', system-ui, sans-serif;
+  --govde: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, Consolas, monospace;
+
+  /* ölçek (yaklaşık 1,25 oran) */
+  --y-kucuk: .875rem;
+  --y-govde: 1.0625rem;
+  --y-giris: clamp(1.125rem, 1.02rem + .45vw, 1.3125rem);
+  --y-h3: clamp(1.25rem, 1.1rem + .6vw, 1.5rem);
+  --y-h2: clamp(2rem, 1.35rem + 2.6vw, 3.5rem);
+  --y-dev: clamp(2.75rem, 1.6rem + 4.8vw, 5.5rem);
+
+  /* boşluk */
+  --b1: .25rem; --b2: .5rem; --b3: .75rem; --b4: 1rem; --b5: 1.5rem; --b6: 2rem; --b7: 3rem; --b8: 4.5rem; --b9: 7rem;
+  --kenar: clamp(16px, 4.2vw, 56px);
+  --genislik: 1200px;
+  --kose: 12px;
+
+  /* hareket: sakin, aşağıdan yukarı */
+  --demlen: cubic-bezier(.2, .7, .2, 1);
+  --sure: 380ms;
+}

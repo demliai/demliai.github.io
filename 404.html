@@ -2,51 +2,80 @@
 <html lang="tr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<base href="/">
+<script>if(location.protocol==='file:')document.querySelector('base').href='./'</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sayfa yok · Demli</title>
-<meta name="robots" content="noindex">
+<meta name="description" content="Aradığın sayfa burada yok.">
 <meta name="theme-color" content="#1E1712">
-<meta name="color-scheme" content="dark">
-<link rel="icon" href="/favicon.ico" sizes="32x32">
-<link rel="icon" href="/assets/img/favicon-32.png" type="image/png" sizes="32x32">
-<link rel="icon" href="/assets/img/favicon-192.png" type="image/png" sizes="192x192">
-<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/gece.css">
-<script>document.documentElement.classList.add('js')</script>
+<link rel="canonical" href="https://demliai.github.io/404.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Demli">
+<meta property="og:title" content="Sayfa yok · Demli">
+<meta property="og:description" content="Aradığın sayfa burada yok.">
+<meta property="og:url" content="https://demliai.github.io/404.html">
+<meta property="og:image" content="https://demliai.github.io/assets/img/og.jpg">
+<meta property="og:locale" content="tr_TR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="assets/img/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preload" href="assets/fontlar/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/belirtecler.css">
+<link rel="stylesheet" href="assets/css/temel.css">
+<link rel="stylesheet" href="assets/css/bilesenler.css">
+<script>if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('hareket')</script>
+<script type="module" src="assets/js/site.js"></script>
 </head>
-<body class="alt-sayfa">
-<header class="ust" data-ust>
-  <a class="marka" href="/" aria-label="Demli ana sayfa">demli<span class="n">.</span></a>
-  <nav aria-label="Site">
-    <ul>
-      <li class="gizle-dar"><a href="/#demli-testi">demli testi</a></li>
-      <li class="gizle-dar"><a href="/slaytlar/">sunumlar</a></li>
-      <li class="gizle-dar"><a href="/duvar-kagidi/">duvar kâğıtları</a></li>
-      <li><a class="yt" href="https://www.youtube.com/@demliai" data-baglanti="youtube" rel="noopener">YouTube <span aria-hidden="true">↗</span></a></li>
-    </ul>
-  </nav>
+<body>
+<a class="atla" href="#icerik">İçeriğe geç</a>
+<header class="ust">
+  <div class="kap ust-ic">
+    <a class="marka" href="./" aria-label="Demli, bağlantılar"><span class="marka-ad">demli</span><span class="marka-nokta" aria-hidden="true"></span></a>
+    <nav class="ust-nav" aria-label="Ana gezinme">
+      <ul><li><a href="demli-testi/">Demli Testi</a></li><li><a href="sunumlar/">Sunumlar</a></li><li><a href="duvar-kagidi/">Duvar kâğıtları</a></li></ul>
+      <a class="dugme dugme-ana" data-baglanti="youtube" href="https://www.youtube.com/@demliai">YouTube’da izle</a>
+    </nav>
+    <details class="mobil-menu">
+      <summary>Menü</summary>
+      <nav class="mobil-panel" aria-label="Mobil gezinme">
+        <ul><li><a href="./">Bağlantılar</a></li><li><a href="demli-testi/">Demli Testi</a></li><li><a href="sunumlar/">Sunumlar</a></li><li><a href="duvar-kagidi/">Duvar kâğıtları</a></li></ul>
+        <a class="dugme dugme-ana" data-baglanti="youtube" href="https://www.youtube.com/@demliai">YouTube’da izle</a>
+      </nav>
+    </details>
+  </div>
 </header>
-<main class="yok" id="icerik">
-  <div>
-    <p class="kicker" data-dem style="--i:0">&gt; 404 · sayfa bulunamadı</p>
-    <h1 data-dem style="--i:1">Bu bardak <span class="vurgu">boş</span><span class="n">.</span></h1>
-    <p class="on-yazi" data-dem style="--i:2">Aradığın sayfa ya taşındı ya hiç demlenmedi. Adresi kontrol et ya da baştan başla.</p>
-    <div class="dugmeler" data-dem style="--i:3">
-      <a class="dugme ana" href="/">Ana sayfaya dön <span aria-hidden="true">→</span></a>
-      <a class="dugme" href="https://www.youtube.com/@demliai" data-baglanti="youtube" rel="noopener">Videolara bak <span aria-hidden="true">↗</span></a>
+<main id="icerik" class="yok">
+  <div class="kap yok-izgara">
+    <div class="yok-demli">
+      <div class="demli" data-demli data-hal="hayal-kirikligi" data-cay=".3" data-ilk-cay=".86">
+                <picture><source type="image/avif" srcset="assets/img/demli/demli-bos-420.avif 420w, assets/img/demli/demli-bos-840.avif 840w" sizes="260px"><img src="assets/img/demli/demli-bos-420.webp" srcset="assets/img/demli/demli-bos-420.webp 420w, assets/img/demli/demli-bos-840.webp 840w" sizes="260px" width="840" height="1001" alt="Demli: çayı dibe inmiş ince belli bir çay bardağı, ayakları üzerinde duruyor, hayal kırıklığıyla aşağı bakıyor."></picture>
+      </div>
+    </div>
+    <div class="yok-metin">
+      <p class="ust-not">404</p>
+      <h1 class="dev"><span class="satir">Bu bardak</span> <span class="satir"><span class="vurgu">boş.</span></span></h1>
+      <p class="giris">Aradığın sayfa burada yok. Taşınmış olabilir, hiç demlenmemiş de olabilir.</p>
+      <div class="dugmeler"><a class="dugme dugme-ana" href="./">Ana sayfaya dön</a><a class="dugme" href="demli-testi/">Demli Testi</a></div>
     </div>
   </div>
-  <div class="demli demli-404" data-demli data-demli-hal="bos" role="img" aria-label="Demli şaşkın: bardağında hiç çay kalmamış."></div>
 </main>
-<footer class="alt-kunye">
-  <span><b>demli.</b> · çay seviyesi ruh halidir</span><span>demliai.github.io</span>
+<footer class="alt">
+  <div class="kap alt-ic">
+    <p class="imza">Demlenmek zaman alır. <span>Bekleriz.</span></p>
+    <div class="alt-izgara">
+      <nav aria-labelledby="alt-site"><h2 id="alt-site">Site</h2><ul>
+        <li><a href="./">Bağlantılar</a></li><li><a href="demli-testi/">Demli Testi</a></li><li><a href="sunumlar/">Sunumlar</a></li><li><a href="duvar-kagidi/">Duvar kâğıtları</a></li>
+      </ul></nav>
+      <nav aria-labelledby="alt-kanal"><h2 id="alt-kanal">Kanal</h2><ul>
+        <li><a data-baglanti="youtube" href="https://www.youtube.com/@demliai">YouTube</a></li>
+        <li><a data-baglanti="github" href="https://github.com/demliai">GitHub</a></li>
+        <li><a data-baglanti="arena" href="https://github.com/demliai/demli-arena">Test arşivi</a></li>
+      </ul></nav>
+    </div>
+    <p class="kunye">Yazılar, rakamlar ve bardaklar kodla çizildi; gece sahneleri Demli atölyesinden. Siteyi yapay zekâyla birlikte yaptım, kararlar benim.</p>
+  </div>
 </footer>
-<script src="/assets/js/config.js"></script>
-<script src="/assets/rig/parcalar.js" defer></script>
-<script src="/assets/rig/demli-rig2.js" defer></script>
-<script src="/assets/js/gece.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,65 @@
+/* Demli · bağlantı merkezi (ana sayfa). Tek ekran: gece sahnesi arkada, Demli rıhtımda, ortada bağlantı yığını. */
+.merkez-sayfa { background: var(--gece-alt); }
+.merkez { position: relative; min-height: 100vh; min-height: 100svh; display: grid; place-items: center; overflow: hidden; isolation: isolate;
+  padding: clamp(20px, 4vh, 44px) var(--kenar); }
+
+/* sahne kutusu ekranı kaplar, alta yaslanır; oranı korunur (çizim bozulmaz, kenarları ekran dışında kalır) */
+.merkez-sahne { position: absolute; z-index: -1; left: 50%; bottom: 0; transform: translateX(-50%);
+  width: max(100%, calc(100vh * 1672 / 941)); aspect-ratio: 1672 / 941; }
+.merkez-sahne > picture img { width: 100%; height: 100%; }
+/* okunurluk perdesi: orta kolonun arkası biraz koyulur (ışıma değil, gölge) */
+.merkez::before { content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: radial-gradient(ellipse 34rem 60% at 50% 46%, rgba(16, 11, 8, .62), rgba(16, 11, 8, 0) 100%); }
+/* Demli rıhtımın sol yarısında, ayakları taş zeminde; eli bağlantılara dönük */
+.merkez-demli { left: 9%; top: 41.5%; width: 23%; }
+
+/* dar ya da dik ekran: sahne bulanık arka plan, Demli profil görselinde */
+@media (max-width: 1099px), (max-aspect-ratio: 5/4) {
+  .merkez-sahne > picture img { filter: blur(7px) brightness(.5) saturate(.9); transform: scale(1.04); }
+  .merkez-demli { display: none; }
+  .merkez::before { background: rgba(16, 11, 8, .25); }
+}
+
+.merkez-kolon { width: min(100%, 440px); display: grid; gap: clamp(18px, 3vh, 28px); justify-items: center; }
+.merkez-bas { display: grid; justify-items: center; gap: .55rem; text-align: center; }
+.profil { display: block; width: clamp(88px, 12vh, 112px); aspect-ratio: 1; border-radius: 50%; padding: 4px;
+  background: var(--gece); box-shadow: 0 0 0 2px var(--altin); }
+.profil img { width: 100%; height: 100%; border-radius: 50%; }
+.merkez-ad { font: 800 clamp(3rem, 2.2rem + 3.2vh, 4.25rem)/.9 var(--baslik); letter-spacing: -.045em; display: inline-flex; align-items: baseline; gap: .04em; margin-top: .25rem; }
+.merkez-ad .marka-nokta { width: .2em; height: .2em; margin-top: 0; font-size: inherit; display: inline-block; }
+.merkez-slogan { font: 500 .9375rem/1.3 var(--mono); color: var(--metin-2); }
+
+/* kart yığını */
+.kartlar { width: 100%; display: grid; gap: 10px; }
+.kart { display: grid; grid-template-columns: 48px minmax(0, 1fr) 20px; align-items: center; gap: 14px; min-height: 66px;
+  padding: 9px 16px 9px 9px; border-radius: 14px; text-decoration: none; color: var(--metin);
+  background: #18120E; border: 1px solid var(--cizgi-guclu);
+  transition: transform var(--sure) var(--demlen), border-color var(--sure) var(--demlen), background-color var(--sure) var(--demlen); }
+.kart:hover { border-color: rgba(247, 238, 228, .55); transform: translateY(-2px); }
+.kart:active { transform: translateY(0); }
+.kart-simge { width: 48px; height: 48px; border-radius: 10px; display: grid; place-items: center; background: var(--gece-ust); border: 1px solid var(--cizgi); }
+.kart-metin { display: grid; gap: 1px; min-width: 0; }
+.kart-ad { font: 800 1.1875rem/1.15 var(--baslik); letter-spacing: -.02em; }
+.kart-acik { font-size: .9063rem; line-height: 1.3; color: var(--metin-2); }
+.kart-ok { color: var(--metin-2); display: grid; place-items: center; }
+/* vurgulu kart: çay kırmızısı, mürekkep kenar ve düz mürekkep gölge (tasarım dili kartı) */
+.kart-vurgu { background: var(--tavsankani); border: 2px solid var(--murekkep); box-shadow: 6px 6px 0 var(--murekkep); }
+.kart-vurgu:hover { background: var(--tavsankani-koyu); border-color: var(--murekkep); }
+.kart-vurgu .kart-simge { background: #7E2414; border-color: rgba(22, 19, 15, .5); }
+.kart-vurgu .kart-acik, .kart-vurgu .kart-ok { color: var(--kagit); }
+
+.merkez-kunye { font: 500 .875rem/1.3 var(--mono); color: var(--metin); text-align: center; padding: .45rem .9rem; border-radius: 8px; background: rgba(16, 11, 8, .78); }
+
+/* açılış: başlık ve kartlar alttan sırayla demlenir */
+.hareket .merkez [data-demlen], .hareket .kartlar .kart { animation: demlen 620ms var(--demlen) both; animation-delay: calc(var(--sira, 0) * 70ms + 120ms); }
+
+@media (max-width: 480px) {
+  .kart { min-height: 64px; gap: 12px; }
+  .kart-acik { font-size: .875rem; }
+  .merkez-kunye { font-size: .75rem; }
+}
+@media (max-height: 760px) and (min-width: 700px) {
+  .kartlar { gap: 8px; }
+  .kart { min-height: 60px; padding-block: 6px; }
+  .kart-simge { width: 44px; height: 44px; }
+}

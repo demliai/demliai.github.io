@@ -1,0 +1,70 @@
+{
+  "_not": "Bütün adresler burada. Ana sayfadaki bağlantı kartları 'merkez' listesinden, sırasıyla. Yalnız gerçekten var olan hedefler. Değiştirince: node araclar/veri-bas.mjs",
+  "youtube": {
+    "ad": "YouTube",
+    "adres": "https://www.youtube.com/@demliai",
+    "etiket": "@demliai"
+  },
+  "github": {
+    "ad": "GitHub",
+    "adres": "https://github.com/demliai",
+    "etiket": "demliai"
+  },
+  "arena": {
+    "ad": "demli-arena",
+    "adres": "https://github.com/demliai/demli-arena",
+    "etiket": "Test arşivi"
+  },
+  "slogan": "yapay zekâ, iyice demlenmiş",
+  "merkez": [
+    {
+      "id": "youtube",
+      "ad": "YouTube",
+      "aciklama": "@demliai · yapay zekâ, demlenmiş",
+      "adres": "https://www.youtube.com/@demliai",
+      "dis": true,
+      "simge": "youtube",
+      "vurgu": true
+    },
+    {
+      "id": "demli-testi",
+      "ad": "Demli Testi",
+      "aciklama": "aynı görev, tek atış, çay ölçer",
+      "adres": "demli-testi/",
+      "dis": false,
+      "simge": "olcer"
+    },
+    {
+      "id": "sunumlar",
+      "ad": "Sunumlar",
+      "aciklama": "videoda açtığım gece sunumları",
+      "adres": "sunumlar/",
+      "dis": false,
+      "simge": "sahne"
+    },
+    {
+      "id": "arena",
+      "ad": "Test arşivi",
+      "aciklama": "demli-arena · prompt, çıktı, puan",
+      "adres": "https://github.com/demliai/demli-arena",
+      "dis": true,
+      "simge": "adisyon"
+    },
+    {
+      "id": "github",
+      "ad": "GitHub",
+      "aciklama": "demliai · açık malzeme",
+      "adres": "https://github.com/demliai",
+      "dis": true,
+      "simge": "dal"
+    },
+    {
+      "id": "duvar-kagidi",
+      "ad": "Duvar kâğıtları",
+      "aciklama": "gece serisi, masaüstü için",
+      "adres": "duvar-kagidi/",
+      "dis": false,
+      "simge": "duvar"
+    }
+  ]
+}

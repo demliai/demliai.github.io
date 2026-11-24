@@ -349,8 +349,11 @@
     ctx.setTransform(1, 0, 0, 1, 0, 0);
     ctx.clearRect(0, 0, f.w, f.h);
     ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = 'high';
-    // nefes: tabak sabit, karakter tabak dibinden çok az esner (kesme animasyonunda tek parça gövde)
-    var br = Math.sin(t / 3600 * Math.PI * 2), sy = 1 + br * .0035, baseY = 1080;
+    // nefes: ayak tabanı (zemin) sabit, karakter tabandan çok az esner (kesme animasyonunda tek parça gövde). Tabak yok.
+    var br = Math.sin(t / 3600 * Math.PI * 2), sy = 1 + br * .0035, baseY = M.zemin || 1080;
+    // temas gölgesi zeminde durur, nefesle esnemez
+    ctx.setTransform(f.s, 0, 0, f.s, f.ox, f.oy);
+    if (IMG.golge) draw(ctx, 'golge');
     ctx.setTransform(f.s, 0, 0, f.s * sy, f.ox, f.oy + baseY * f.s * (1 - sy));
 
     // gövde + çay
