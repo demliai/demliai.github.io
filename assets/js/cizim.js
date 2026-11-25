@@ -176,7 +176,7 @@ export function bolgeleriYaz(html, veri) {
 // ---------- bağlantı merkezi simgeleri: mürekkep çizgi + halftone, kodla çizildi (stok/klişe simge yok) ----------
 const KREM = '#F7EEE4', CAY = '#DC6C21';
 let simgeNo = 0;
-export function simge(ad) {
+export function simge(ad, boy = 34) {
   const id = 'ht' + (++simgeNo).toString(36) + ad.slice(0, 2);
   const nokta = (renk = KREM, op = .55) => `<defs><pattern id="${id}" width="2.6" height="2.6" patternUnits="userSpaceOnUse"><circle cx="1.3" cy="1.3" r=".62" fill="${renk}" fill-opacity="${op}"/></pattern></defs>`;
   const c = `fill="none" stroke="${KREM}" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"`;
@@ -199,9 +199,21 @@ export function simge(ad) {
     dal: `<path d="M7 10.8v11.4M24 12.8c0 6-10 5-15.6 10.6" ${c}/><circle cx="7" cy="8" r="2.8" ${c}/><circle cx="7" cy="25" r="2.8" fill="${CAY}" stroke="${KREM}" stroke-width="2.1"/><circle cx="24" cy="10" r="2.8" ${c}/>`,
     // ekran: ay, köprü, su
     duvar: `${nokta()}<rect x="3" y="5" width="26" height="17" rx="2.5" ${c}/><rect x="5" y="16" width="22" height="4.5" fill="url(#${id})"/><circle cx="22.5" cy="10" r="2.2" fill="${CAY}"/>` +
-      `<path d="M10 17V11.5M17.5 17V11.5M5.5 14q4.5-2.5 4.5-2.5q3.75 5 7.5 0q4 2.5 8.5 2" ${c} stroke-width="1.6"/><path d="M13 22l-1.2 5h8.4L19 22" ${c}/>`
+      `<path d="M10 17V11.5M17.5 17V11.5M5.5 14q4.5-2.5 4.5-2.5q3.75 5 7.5 0q4 2.5 8.5 2" ${c} stroke-width="1.6"/><path d="M13 22l-1.2 5h8.4L19 22" ${c}/>`,
+    // film karesi: delikli şerit, ortada oynat
+    film: `${nokta()}<rect x="4" y="6" width="24" height="20" rx="3" fill="url(#${id})"/><rect x="4" y="6" width="24" height="20" rx="3" ${c}/>` +
+      `<path d="M8 6v20M24 6v20" ${c} stroke-width="1.6"/><path d="M5.5 10.5h1M5.5 16h1M5.5 21.5h1M25.5 10.5h1M25.5 16h1M25.5 21.5h1" ${c} stroke-width="1.6"/>` +
+      `<path d="M13.5 11.5l6.5 4.5-6.5 4.5z" fill="${CAY}" stroke="${KREM}" stroke-width="1.6" stroke-linejoin="round"/>`,
+    // dikey ekran: kısa video
+    kisa: `${nokta()}<rect x="9.5" y="3" width="13" height="26" rx="3.2" fill="url(#${id})"/><rect x="9.5" y="3" width="13" height="26" rx="3.2" ${c}/>` +
+      `<path d="M14 12.5l5 3.5-5 3.5z" fill="${CAY}"/><path d="M14.5 25.5h3" ${c} stroke-width="1.6"/><path d="M5 10v12M27 10v12" ${c} stroke-width="1.6" stroke-dasharray=".1 3.4"/>`,
+    // fotoğraf makinesi gövdesi: Instagram
+    instagram: `${nokta()}<rect x="5" y="5" width="22" height="22" rx="6.5" ${c}/><circle cx="16" cy="16" r="5.2" fill="url(#${id})"/><circle cx="16" cy="16" r="5.2" ${c}/><circle cx="22.2" cy="9.8" r="1.5" fill="${CAY}"/>`,
+    // nota: TikTok sesleri
+    tiktok: `<path d="M19.6 6v16M19.6 6c.6 3.6 3.4 6 7 6.2" fill="none" stroke="${CAY}" stroke-width="2.1" stroke-linecap="round"/><ellipse cx="15.2" cy="22.7" rx="4.6" ry="4.2" fill="none" stroke="${CAY}" stroke-width="2.1"/>` +
+      `<path d="M18 4.5v16" ${c}/><path d="M18 4.5c.6 3.6 3.4 6 7 6.2" ${c}/><ellipse cx="13.6" cy="21.2" rx="4.6" ry="4.2" fill="${CAY}" stroke="${KREM}" stroke-width="2.1"/>`
   }[ad] || '';
-  return `<svg viewBox="0 0 32 32" width="34" height="34" aria-hidden="true" focusable="false">${govde}</svg>`;
+  return `<svg viewBox="0 0 32 32" width="${boy}" height="${boy}" aria-hidden="true" focusable="false">${govde}</svg>`;
 }
 const OK_DIS = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 const OK_IC = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
@@ -211,3 +223,8 @@ BOLGE['merkez-kartlar'] = (v, kok) => `<ul class="kartlar">` + v.baglantilar.mer
   `<span class="kart-simge">${simge(b.simge)}</span><span class="kart-metin"><span class="kart-ad">${k(b.ad)}</span><span class="kart-acik">${k(b.aciklama)}</span></span>` +
   `<span class="kart-ok">${b.dis ? OK_DIS : OK_IC}</span></a></li>`).join('') + `</ul>`;
 BOLGE['merkez-slogan'] = v => `&gt; ${k(v.baglantilar.slogan)}`;
+// sosyal simge sırası: YouTube, Instagram, TikTok, GitHub (yalnız simge; ad ekran okuyucuya ve ipucuna)
+BOLGE['merkez-sosyal'] = v => `<ul class="sosyal">` + v.baglantilar.sosyal.map(ad => {
+  const b = v.baglantilar[ad];
+  return `<li><a class="sosyal-dugme" href="${k(b.adres)}" rel="noopener" aria-label="${k(b.ad)}: ${k(b.etiket)}" title="${k(b.ad)}">${simge(ad === 'github' ? 'dal' : ad, 26)}</a></li>`;
+}).join('') + `</ul>`;

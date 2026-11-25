@@ -29,6 +29,15 @@
 .merkez-ad .marka-nokta { width: .2em; height: .2em; margin-top: 0; font-size: inherit; display: inline-block; }
 .merkez-slogan { font: 500 .9375rem/1.3 var(--mono); color: var(--metin-2); }
 
+/* sosyal simge sırası: dört yuvarlak düğme, kartlardan hafif; üzerine gelince çay rengi kenar */
+.sosyal-nav { margin-top: .35rem; }
+.sosyal { display: flex; gap: 12px; justify-content: center; list-style: none; padding: 0; margin: 0; }
+.sosyal-dugme { width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center;
+  background: rgba(24, 18, 14, .88); border: 1px solid var(--cizgi-guclu);
+  transition: transform var(--sure) var(--demlen), border-color var(--sure) var(--demlen); }
+.sosyal-dugme:hover, .sosyal-dugme:focus-visible { border-color: var(--tavsankani); transform: translateY(-2px); }
+.sosyal-dugme:active { transform: translateY(0); }
+
 /* kart yığını */
 .kartlar { width: 100%; display: grid; gap: 10px; }
 .kart { display: grid; grid-template-columns: 48px minmax(0, 1fr) 20px; align-items: center; gap: 14px; min-height: 66px;
@@ -40,7 +49,7 @@
 .kart-simge { width: 48px; height: 48px; border-radius: 10px; display: grid; place-items: center; background: var(--gece-ust); border: 1px solid var(--cizgi); }
 .kart-metin { display: grid; gap: 1px; min-width: 0; }
 .kart-ad { font: 800 1.1875rem/1.15 var(--baslik); letter-spacing: -.02em; }
-.kart-acik { font-size: .9063rem; line-height: 1.3; color: var(--metin-2); }
+.kart-acik { font-size: .9375rem; line-height: 1.3; color: var(--metin-2); }
 .kart-ok { color: var(--metin-2); display: grid; place-items: center; }
 /* vurgulu kart: çay kırmızısı, mürekkep kenar ve düz mürekkep gölge (tasarım dili kartı) */
 .kart-vurgu { background: var(--tavsankani); border: 2px solid var(--murekkep); box-shadow: 6px 6px 0 var(--murekkep); }
@@ -55,7 +64,7 @@
 
 @media (max-width: 480px) {
   .kart { min-height: 64px; gap: 12px; }
-  .kart-acik { font-size: .875rem; }
+  .kart-acik { font-size: .9375rem; }
   .merkez-kunye { font-size: .75rem; }
 }
 @media (max-height: 760px) and (min-width: 700px) {

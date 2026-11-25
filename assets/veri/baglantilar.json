@@ -1,8 +1,18 @@
 {
-  "_not": "Bütün adresler burada. Ana sayfadaki bağlantı kartları 'merkez' listesinden, sırasıyla. Yalnız gerçekten var olan hedefler. Değiştirince: node araclar/veri-bas.mjs",
+  "_not": "Bütün adresler burada. Ana sayfadaki bağlantı kartları 'merkez' listesinden, sosyal simgeler 'sosyal' listesinden, sırasıyla. Yalnız gerçekten var olan hedefler. Değiştirince: node araclar/veri-bas.mjs",
   "youtube": {
     "ad": "YouTube",
     "adres": "https://www.youtube.com/@demliai",
+    "etiket": "@demliai"
+  },
+  "instagram": {
+    "ad": "Instagram",
+    "adres": "https://www.instagram.com/demliai/",
+    "etiket": "@demliai"
+  },
+  "tiktok": {
+    "ad": "TikTok",
+    "adres": "https://www.tiktok.com/@demliai",
     "etiket": "@demliai"
   },
   "github": {
@@ -16,23 +26,24 @@
     "etiket": "Test arşivi"
   },
   "slogan": "yapay zekâ, iyice demlenmiş",
+  "sosyal": ["youtube", "instagram", "tiktok", "github"],
   "merkez": [
     {
-      "id": "youtube",
-      "ad": "YouTube",
-      "aciklama": "@demliai · yapay zekâ, demlenmiş",
-      "adres": "https://www.youtube.com/@demliai",
+      "id": "son-video",
+      "ad": "Son video",
+      "aciklama": "Kanalı yapay zekâyla kurdum",
+      "adres": "https://youtu.be/LIHSvyFbiyE",
       "dis": true,
-      "simge": "youtube",
+      "simge": "film",
       "vurgu": true
     },
     {
-      "id": "demli-testi",
-      "ad": "Demli Testi",
-      "aciklama": "aynı görev, tek atış, çay ölçer",
-      "adres": "demli-testi/",
-      "dis": false,
-      "simge": "olcer"
+      "id": "kisalar",
+      "ad": "Kısa videolar",
+      "aciklama": "Shorts · maskot, parçalar, dersler",
+      "adres": "https://www.youtube.com/@demliai/shorts",
+      "dis": true,
+      "simge": "kisa"
     },
     {
       "id": "sunumlar",
@@ -43,12 +54,12 @@
       "simge": "sahne"
     },
     {
-      "id": "arena",
-      "ad": "Test arşivi",
-      "aciklama": "demli-arena · prompt, çıktı, puan",
-      "adres": "https://github.com/demliai/demli-arena",
-      "dis": true,
-      "simge": "adisyon"
+      "id": "duvar-kagidi",
+      "ad": "Duvar kâğıtları",
+      "aciklama": "gece serisi, masaüstü için",
+      "adres": "duvar-kagidi/",
+      "dis": false,
+      "simge": "duvar"
     },
     {
       "id": "github",
@@ -57,14 +68,6 @@
       "adres": "https://github.com/demliai",
       "dis": true,
       "simge": "dal"
-    },
-    {
-      "id": "duvar-kagidi",
-      "ad": "Duvar kâğıtları",
-      "aciklama": "gece serisi, masaüstü için",
-      "adres": "duvar-kagidi/",
-      "dis": false,
-      "simge": "duvar"
     }
   ]
 }
