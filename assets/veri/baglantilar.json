@@ -26,7 +26,12 @@
     "etiket": "Test arşivi"
   },
   "slogan": "yapay zekâ, iyice demlenmiş",
-  "sosyal": ["youtube", "instagram", "tiktok", "github"],
+  "sosyal": [
+    "youtube",
+    "instagram",
+    "tiktok",
+    "github"
+  ],
   "merkez": [
     {
       "id": "son-video",
@@ -36,6 +41,14 @@
       "dis": true,
       "simge": "film",
       "vurgu": true
+    },
+    {
+      "id": "simit-seferi",
+      "ad": "Oyna: Simit Seferi",
+      "aciklama": "Opus'un oyunu · skor tablosu",
+      "adres": "simit-seferi/",
+      "dis": false,
+      "simge": "simit"
     },
     {
       "id": "kisalar",

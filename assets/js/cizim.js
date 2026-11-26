@@ -207,6 +207,11 @@ export function simge(ad, boy = 34) {
     // dikey ekran: kısa video
     kisa: `${nokta()}<rect x="9.5" y="3" width="13" height="26" rx="3.2" fill="url(#${id})"/><rect x="9.5" y="3" width="13" height="26" rx="3.2" ${c}/>` +
       `<path d="M14 12.5l5 3.5-5 3.5z" fill="${CAY}"/><path d="M14.5 25.5h3" ${c} stroke-width="1.6"/><path d="M5 10v12M27 10v12" ${c} stroke-width="1.6" stroke-dasharray=".1 3.4"/>`,
+    // simit: oyun (Simit Seferi) — noktalı halka, susamlar, çay rengi tek vurgu
+    simit: `${nokta()}<path d="M16 4.5a11.5 11.5 0 1 0 0 23a11.5 11.5 0 1 0 0-23zM16 11.2a4.8 4.8 0 1 1 0 9.6a4.8 4.8 0 1 1 0-9.6z" fill="url(#${id})" fill-rule="evenodd"/>` +
+      `<circle cx="16" cy="16" r="11.5" ${c}/><circle cx="16" cy="16" r="4.8" ${c}/>` +
+      `<path d="M9.2 9.6l1.4 1M15.5 6.6l.2 1.6M21.6 8.6l-1 1.2M24.4 15l-1.6.3M22.4 21.6l-1.2-1M10 22.4l1-1.2M7.4 16.4l1.6-.2" ${c} stroke-width="1.5"/>` +
+      `<path d="M24.2 9.4a11.5 11.5 0 0 1 2.9 8.2" fill="none" stroke="${CAY}" stroke-width="2.4" stroke-linecap="round"/>`,
     // fotoğraf makinesi gövdesi: Instagram
     instagram: `${nokta()}<rect x="5" y="5" width="22" height="22" rx="6.5" ${c}/><circle cx="16" cy="16" r="5.2" fill="url(#${id})"/><circle cx="16" cy="16" r="5.2" ${c}/><circle cx="22.2" cy="9.8" r="1.5" fill="${CAY}"/>`,
     // nota: TikTok sesleri
