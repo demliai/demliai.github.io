@@ -62,3 +62,6 @@ function menu() {
 menu();
 veriTazele();
 demliler();
+
+// Site müziği "Gece çay ocağı" (kodla üretilir, varsayılan kapalı, sol alttaki düğmeyle açılır). Hata verse bile site çalışmaya devam eder.
+import('./muzik.js').catch(() => {});
